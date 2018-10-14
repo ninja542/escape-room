@@ -145,7 +145,7 @@ let app = new Vue({
 				this.fadeText("This one seems obvious.");
 			}
 			else if (item == "instruction paper"){
-				this.fadeText("It was written in invisible ink! It says: Press the buttons in ascending order, but there aren’t numbers on the buttons.", 4000);
+				this.fadeText("It was written in invisible ink! It says: Press the buttons in ascending order, but there aren't numbers on the buttons.", 4000);
 			}
 			else if (item == "completed code"){
 				this.fadeText("Looks like the completed code says: 'The Answer lies in Darkness.' Talk about a cliche.");
@@ -242,27 +242,27 @@ let app = new Vue({
 					this.fadeText("Uh, not sure how this will work, but there's no harm in trying! BANG BANG BANG. Whoops. Oh no, the room's filling up with water that's not-BLUB BLUB blub...", 4000);
 				}
 				if (this.isActive == "tape"){
-					this.fadeText("Finally, some peace and quiet. Oh! A number was under the tape on the duct tape roll. It’s the number 1.");
+					this.fadeText("Finally, some peace and quiet. Oh! A number was under the tape on the duct tape roll. It's the number 1.");
 				}
 			}
 			else if (item == "window"){
 				if (this.isActive == "flashlight"){
-					this.fadeText("This flashlight sure is helpful. There’s something on the windowsill.");
+					this.fadeText("This flashlight sure is helpful. There's something on the windowsill.");
 					this.pickup('wire');
 				}
 			}
 			else if (item == "mirror"){
 				if (this.isActive == "gibberishpaper"){
-					this.fadeText("I’ve seen this work in a movie once. Hey, it’s legible in the mirror! Can’t believe I didn’t recognize reversed letters. Looks like this is only half of the full thing.", 4000);
+					this.fadeText("I've seen this work in a movie once. Hey, it's legible in the mirror! Can't believe I didn't recognize reversed letters. Looks like this is only half of the full thing.", 4000);
 					this.pickup("code 1");
 				}
 			}
 			else if (item == "cupboard"){
 				if (this.isActive == "lighter"){
-					this.fadeText("This seems unlikely to work, but let’s try. . . The rope is only slightly charred. The lighter is out of fluid now...");
+					this.fadeText("This seems unlikely to work, but let's try. . . The rope is only slightly charred. The lighter is out of fluid now...");
 				}
 				if (this.isActive == "screwdriver"){
-					this.fadeText("I think this is called death by a thousand paper cuts. I’ll need to cut many times.");
+					this.fadeText("I think this is called death by a thousand paper cuts. I'll need to cut many times.");
 					this.ropehealth -= 1;
 					if (this.ropehealth == 0){
 						this.fadeText("What an ordeal. I think I would have prefered an obscure puzzle instead.");
@@ -271,7 +271,7 @@ let app = new Vue({
 			}
 			else if (item == "switch"){
 				if (this.isActive == "screwdriver"){
-					this.fadeText("Maybe I can just force it to work... SNAP. I knew I shouldn’t have dropped that lever handling class.");
+					this.fadeText("Maybe I can just force it to work... SNAP. I knew I shouldn't have dropped that lever handling class.");
 				}
 				if (this.isActive == "hand"){
 					this.fadeText("I think I have this puzzle figured out.");
@@ -304,28 +304,28 @@ let app = new Vue({
 				if (this.isActive == "hand"){
 					this.fadeText("Gulp. Just gotta go for it...Oh! I feel something.");
 					setTimeout(function(){app.pickup("candle");}, 2000);
-					setTimeout(function(){this.fadeText("Hey there’s a number written on the bottom. It’s the number 2.");}, 4000);
+					setTimeout(function(){this.fadeText("Hey there's a number written on the bottom. It's the number 2.");}, 4000);
 				}
 			}
 			else if (item == "bottom cubby"){
 				if (this.isActive == "wire"){
-					this.fadeText("Another marketable skill for my resume. CLICK. I’m in.");
+					this.fadeText("Another marketable skill for my resume. CLICK. I'm in.");
 					// change to unlocked bottom cubby
 				}
 			}
 			else if (item == "unlocked bottom cubby"){
 				if (this.isActive == "flashlight" && this.spiderhealth > 0){
-					this.fadeText("Now that I have this, I won’t surprised again... WOAH A SPIDER. Oh crap it's coming at me!");
+					this.fadeText("Now that I have this, I won't surprised again... WOAH A SPIDER. Oh crap it's coming at me!");
 					// spider attack animation thing
 				}
 				if (this.isActive == "flashlight" && this.spiderhealth == 0){
-					this.fadeText("If there’s a second spider, I’d rather just die. There’s another tool back here.");
+					this.fadeText("If there's a second spider, I'd rather just die. There's another tool back here.");
 					setTimeout(function(){app.pickup("pliers");}, 4000);
 				}
 			}
 			else if (item == "spider"){
 				if (this.isActive == "bone" && this.spiderhealth > 0){
-					this.fadeText("It won’t go down I’ll have to use it again!");
+					this.fadeText("It won't go down I'll have to use it again!");
 				}
 				else {
 					this.fadeText("Die! Die! Back to the hell you came from!");
@@ -333,7 +333,7 @@ let app = new Vue({
 			}
 			else if (item == "mirror"){
 				if (this.isActive == "bone"){
-					this.fadeText("I bet there’s something behind this mirror. As a bonus, I won’t have to look at my face anymore. . . I’m on a roll here!",  3000);
+					this.fadeText("I bet there's something behind this mirror. As a bonus, I won't have to look at my face anymore... I'm on a roll here!",  3000);
 				}
 			}
 			else if (item == "light"){
@@ -343,30 +343,30 @@ let app = new Vue({
 			}
 			else if (item == "og door"){
 				if (this.isActive == "wire"){
-					this.fadeText("Trust me, I’m an expert at lockpicking. CREAK. Nobody heard that. The wire’s warped and useless now.");
+					this.fadeText("Trust me, I'm an expert at lockpicking. CREAK. Nobody heard that. The wire's warped and useless now.");
 					this.inventory.splice(this.inventory.indexOf("wire"), 1);
 				}
 				if (this.isActive == "key"){
-					this.fadeText("I’m free! Uh why is it pitch black? What’s that sound coming closer?! Fate is cruel.");
+					this.fadeText("I'm free! Uh why is it pitch black? What's that sound coming closer?! Fate is cruel.");
 				}
 			}
 			else if (item == "hidden door"){
 				if (this.isActive == "hand"){
-					this.fadeText("It’s locked. I need a key but I can’t search for one in this darkness.");
+					this.fadeText("It's locked. I need a key but I can't search for one in this darkness.");
 				}
 				if (this.isActive == "key"){
-					this.fadeText("I’m free! Thanks for playing everyone! Onward to my routine and boring normal life!");
+					this.fadeText("I'm free! Thanks for playing everyone! Onward to my routine and boring normal life!");
 				}
 			}
 			else if (item == "safe" && this.inventory.includes("flashlight") == false){
 				if (this.isActive == "hand"){
-					this.fadeText("Let’s give this a whirl. Hopefully, it doesn’t do something dumb like explode if I get it wrong.");
+					this.fadeText("Let's give this a whirl. Hopefully, it doesn't do something dumb like explode if I get it wrong.");
 				}
 				// stuff for safe cracking
 			}
 			else if (item == "safe" && this.inventory.includes("flashlight")){
 				if (this.isActive == "hand"){
-					this.fadeText("Let’s see if there’s anything underneath here. Bingo! It’s a piece of paper with some gibberish... Slightly better than being blank I suppose.");
+					this.fadeText("Let's see if there's anything underneath here. Bingo! It's a piece of paper with some gibberish... Slightly better than being blank I suppose.");
 					this.pickup('gibberishpaper');
 				}
 			}
@@ -377,7 +377,7 @@ let app = new Vue({
 				}
 			}
 			else {
-				this.fadeText("I don’t think this will help me here.");
+				this.fadeText("I don't think this will help me here.");
 			}
 		},
 		combine: function(item){
@@ -397,7 +397,7 @@ let app = new Vue({
 				}
 			}
 			else {
-				this.fadeText("I don’t think these two items are compatible");
+				this.fadeText("I don't think these two items are compatible");
 			}
 		},
 		fadeText: function(message, time = 2000){
