@@ -18,7 +18,8 @@
 				<div id="tape" v-on:click.once="examine('tape')" v-show="inventory.includes('tape') == false && orientation == 3 && mode == 'examine'"></div>
 				<div id="rug" v-on:click.once="examine('rug')" v-show="orientation == 2 && mode == 'examine'"></div>
 				<div id="mirror" v-show="orientation == 1 && mode == 'examine'|| mode == 'use'" v-on:click="examine('mirror')"></div>
-				<div id="door" v-show="orientation == 2 && mode == 'examine'|| mode == 'use'" v-on:click="examine('og door')"></div>
+				<div id="door" v-show="orientation == 2 && mode == 'examine'" v-on:click="examine('og door')"></div>
+				<div id="door" v-show="orientation == 2 && mode == 'use'" v-on:click="use('og door')"></div>
 				<div id="lamp" v-show="orientation == 2 && mode == 'examine' || mode == 'use'" v-on:click="examine('light')"></div>
 
 				<div id="acquired"><p id="acquiredtext"></p></div>

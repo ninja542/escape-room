@@ -177,11 +177,11 @@ let app = new Vue({
 			}
 			else if (item == "switch"){
 				this.fadeText("It looks like a complex puzzle. There's a poem engraved beside it.");
-				setTimeout(function(){this.fadeText("One Alligator, Two Raven, Three Shark, Four Hippopotamus, Five Butterfly");}, 4000);
+				setTimeout(function(){app.fadeText("One Alligator, Two Raven, Three Shark, Four Hippopotamus, Five Butterfly");}, 4000);
 			}
 			else if (item == "mirror"){
 				this.fadeText("This mirror is so dirty that I can barely see myself.");
-				setTimeout(function(){this.fadeText("There's something reflected behind me. It's the number 9.");}, 4000);
+				setTimeout(function(){app.fadeText("There's something reflected behind me. It's the number 9.");}, 4000);
 			}
 			else if (item == "mirror alcove"){
 				this.fadeText("Looks like the second half of the code. Thankfully, this part isn't reversed.");
@@ -192,7 +192,7 @@ let app = new Vue({
 			}
 			else if (item == "safe"){
 				this.fadeText("Everyone knows that safes always have important things in them, but how'd they get this in here without me noticing? ");
-				setTimeout(function(){this.fadeText("There's something engraved on it: 1 and 5 are not adjacent. Even. Multiply the outside to get the inside.");}, 4000);
+				setTimeout(function(){app.fadeText("There's something engraved on it: 1 and 5 are not adjacent. Even. Multiply the outside to get the inside.");}, 4000);
 			}
 			else if (item == "empty safe"){
 				this.fadeText("There's nothing inside anymore, but there are still secrets to be discovered");
@@ -202,11 +202,11 @@ let app = new Vue({
 			}
 			else if (item == "light"){
 				this.fadeText("How many game designers does it take to change a lightbulb? Too many apparently.");
-				setTimeout(function(){this.fadeText("There's something stuck in it, but it's too difficult to reach.");}, 4000);
+				setTimeout(function(){app.fadeText("There's something stuck in it, but it's too difficult to reach.");}, 4000);
 			}
 			else if (item == "rug" && this.inventory.includes("paperinvis") == false){
 				this.fadeText("Usually there's something underneath these.");
-				setTimeout(function(){this.pickup("paperinvis");}, 4000);
+				setTimeout(function(){app.pickup("paperinvis");}, 4000);
 			}
 			else if (item == "rug"){
 				this.fadeText("Nothing to see here.");
@@ -292,19 +292,19 @@ let app = new Vue({
 			else if (item == "light"){
 				if (this.isActive == "plier"){
 					this.fadeText("Now I can get whatever is stuck in there. Looks like another number puzzle.");
-					setTimeout(function(){this.fadeText("2 is only bordered by one other number. Odd. The odd numbers are in ascending order.");}, 4000);
+					setTimeout(function(){app.fadeText("2 is only bordered by one other number. Odd. The odd numbers are in ascending order.");}, 4000);
 				}
 			}
 			else if (item == "top cubby"){
 				if (this.isActive == "lighter"){
 					this.fadeText("The cubby is illuminated.");
 					setTimeout(function(){app.pickup("candle");}, 2000);
-					setTimeout(function(){this.fadeText("The lighter is out of fluid now...");}, 4000);
+					setTimeout(function(){app.fadeText("The lighter is out of fluid now...");}, 4000);
 				}
 				if (this.isActive == "hand"){
 					this.fadeText("Gulp. Just gotta go for it...Oh! I feel something.");
 					setTimeout(function(){app.pickup("candle");}, 2000);
-					setTimeout(function(){this.fadeText("Hey there's a number written on the bottom. It's the number 2.");}, 4000);
+					setTimeout(function(){app.fadeText("Hey there's a number written on the bottom. It's the number 2.");}, 4000);
 				}
 			}
 			else if (item == "bottom cubby"){
